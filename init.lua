@@ -1,37 +1,43 @@
 -- Set runtime path to include lazy.nvim
-vim.opt.rtp:prepend(vim.env.LOCALAPPDATA .. '\\nvim\\lazy\\lazy.nvim')
+vim.opt.rtp:prepend(vim.env.LOCALAPPDATA .. "\\nvim\\lazy\\lazy.nvim")
 
 -- Indentation and code style
-require('indentation')
+require("indentation")
 
 -- Plugins
-local plugins = require('plugins')
-require('lazy').setup(plugins)
+local plugins = require("plugins")
+require("lazy").setup(plugins)
 
 -- Treesitter configuration
-require('treesitter')
+require("treesitter")
 
 -- Autopair configuration
-require('nvim-autopairs').setup({})
+require("nvim-autopairs").setup({})
 
 -- Terminal commands
-vim.cmd[[colorscheme carbonfox]] -- Colorscheme
+require("terminal")
 
 -- Startify configuration
-vim.g.startify_session_autoload = 1
-vim.g.startify_session_persistence = 1
+require("startify_conf")
 
 -- Bufferline configuration
-vim.opt.termguicolors = true
-require("bufferline").setup{}
-vim.api.nvim_set_keymap('n', '<S-l>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-l>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-h>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>bo', ':BufferLineCloseLeft<CR>:BufferLineCloseRight<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>bp', ':BufferLinePick<CR>', { noremap = true, silent = true })
+require("bufferline").setup{} 
+require("bufferline_key")
 
--- Nerdtree configuration
-vim.g.NERDTreeWinPos = 'right'
+-- ToggelTerm configuration
+require("toggleterm_conf")
 
+-- LuaSnip configuration
+require("luasnip.loaders.from_vscode").lazy_load()
+
+-- LSP configuration
+require("lsp_conf")
+
+-- cmp configuration
+require("cmp_conf")
+
+-- Mason setup
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = {"clangd"},
+})
