@@ -1,3 +1,3 @@
 -- Terminal commands
-vim.cmd[[colorscheme carbonfox]] -- Colorscheme
+vim.cmd[[colorscheme nightfox]] -- Colorscheme
 
