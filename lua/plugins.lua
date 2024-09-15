@@ -4,7 +4,6 @@ local plugins = {
   {"nvim-telescope/telescope.nvim", tag = "0.1.8", dependencies = {"nvim-lua/plenary.nvim"}},
   {"windwp/nvim-autopairs"},
   {"akinsho/toggleterm.nvim", version = "*", config = true},
-  {"EdenEast/nightfox.nvim"},
   {"neovim/nvim-lspconfig"},
   {"mhinz/vim-startify"},
   {"akinsho/bufferline.nvim", version = "*"},
@@ -20,7 +19,8 @@ local plugins = {
   {"williamboman/mason.nvim", dependencies = {"williamboman/mason-lspconfig.nvim"}},
   {"vim-airline/vim-airline"},
   {"nvim-tree/nvim-tree.lua"},
-  {"nvim-tree/nvim-web-devicons"}
+  {"nvim-tree/nvim-web-devicons"},
+  {"EdenEast/nightfox.nvim"}
 }
 
 return plugins
