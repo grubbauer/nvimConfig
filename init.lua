@@ -36,6 +36,9 @@ require("lsp_conf")
 -- cmp configuration
 require("cmp_conf")
 
+-- Nvim Tree configuration
+require("nvim-tree_conf")
+
 -- Mason setup
 require("mason").setup()
 require("mason-lspconfig").setup({

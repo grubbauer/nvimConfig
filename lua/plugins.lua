@@ -18,8 +18,9 @@ local plugins = {
     "neovim/nvim-lspconfig"
   }},
   {"williamboman/mason.nvim", dependencies = {"williamboman/mason-lspconfig.nvim"}},
-  {"ryanoasis/vim-devicons"},
-  {"vim-airline/vim-airline"}
+  {"vim-airline/vim-airline"},
+  {"nvim-tree/nvim-tree.lua"},
+  {"nvim-tree/nvim-web-devicons"}
 }
 
 return plugins
