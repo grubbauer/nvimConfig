@@ -36,8 +36,12 @@ require("lsp_conf")
 -- cmp configuration
 require("cmp_conf")
 
+-- Chadtree configuration
+require("chadtree_conf")
+
 -- Mason setup
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {"clangd"},
 })
+
