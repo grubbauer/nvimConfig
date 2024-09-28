@@ -20,7 +20,7 @@ local plugins = {
   {"vim-airline/vim-airline"},
   {"nvim-tree/nvim-web-devicons"},
   {"EdenEast/nightfox.nvim"},
-  {"ms-jpq/chadtree"}
+  {"nvim-tree/nvim-tree.lua"}
 }
 
 return plugins

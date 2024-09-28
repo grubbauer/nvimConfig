@@ -20,6 +20,9 @@ require("terminal")
 -- Startify configuration
 require("startify_conf")
 
+-- NvimTree configuration
+require("nvimtree_conf")
+
 -- Bufferline configuration
 require("bufferline").setup{} 
 require("bufferline_key")
@@ -35,9 +38,6 @@ require("lsp_conf")
 
 -- cmp configuration
 require("cmp_conf")
-
--- Chadtree configuration
-require("chadtree_conf")
 
 -- Mason setup
 require("mason").setup()
